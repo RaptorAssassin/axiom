@@ -1,4 +1,28 @@
 :root {
-    --corner-radius: 5px;
-    --background-color: gray;
+    --body-background-color: #0B1215; 
+    --border-radius: 5px;
+    --panel-background-color: darkgray;
+    --panel-color: gray;
+    --gradient-color-1: #ADD8E6;
+    --gradient-color-2: rgb(57, 176, 216);
+}
+
+body {
+    font-family: "Noto Kufi Arabic", sans-serif;
+    background-color: var(--body-background-color);
+}
+
+.gradient {
+    font-weight: 700;
+    background-image: linear-gradient(90deg,var(--gradient-color-1), var(--gradient-color-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+
+.panel {
+    background-color: var(--panel-background-color);
+    color: var(--panel-color);
+    border-radius: var(--border-radius);
 }
