@@ -1,8 +1,10 @@
 :root {
-    --body-background-color: #0B1215; 
+    --body-background-color: #121212; 
     --border-radius: 5px;
+    --border-width: 10opx;
     --panel-background-color: darkgray;
-    --panel-color: gray;
+    --panel-color: rgb(212, 212, 212);
+    --panel-border-color: rgb(255, 65, 65);
     --gradient-color-1: #ADD8E6;
     --gradient-color-2: rgb(57, 176, 216);
 }
@@ -10,6 +12,16 @@
 body {
     font-family: "Noto Kufi Arabic", sans-serif;
     background-color: var(--body-background-color);
+    color: white;
+}
+
+i {
+    font-size: smaller;
+    text-align: center;
+}
+
+a {
+    color: var(--gradient-color-2)
 }
 
 .gradient {
@@ -20,9 +32,57 @@ body {
     
 }
 
-
 .panel {
     background-color: var(--panel-background-color);
     color: var(--panel-color);
+    border-color: var(--panel-border-color);
     border-radius: var(--border-radius);
+    corner-shape: squircle;
+    border-width: var(--border-width);
+    size: auto;
+}
+
+.panel-element {
+    margin: 1em;
+    corner-shape: squircle;
+    color: var(--panel-color);
+    border-color: var(--panel-border-color);
+    border-width: var(--border-width);
+}
+
+
+.select {
+    border-radius: var(--border-radius);
+}
+
+.select:hover {
+    border-color: var(--gradient-color-2);
+}
+
+.select:highlight {
+    border-color: var(--gradient-color-2);
+}
+
+.select:focus {
+    border-color: var(--gradient-color-2);
+}
+
+.bar {
+    background-image: linear-gradient(0deg, white, blue);
+    border-radius: var(--border-radius);
+}
+
+.fade {
+    animation: fadeUp 0.5s linear;
+}
+
+@keyframes fadeUp {
+    from  {
+        opacity: 0;
+         transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

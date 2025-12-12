@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,23 +10,41 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
-
     </head>
     <body>
-        <div id="header">
-            <h1 id="main-header" class="gradient">Sorting algorithms</h1>
+        <header>
+            <h1 id="main-header" class="title gradient">Sorting algorithms</h1>
+        </header>
+        <main>
+            <div id="settings-div" class="panel fade">
+                <div class="settings panel">
+                    <div class="control-group panel-element">
+                        <label for="algorithm-select">Sorting Algorithm</label>
+                        <select id="algorithm-select" class="select" name="algorithm-select">
+                            <optgroup label="Standard">
+                                <option id="bubble-sort" class="option" name="bubble-sort" value="bubble" selected>Bubble Sort</option>
+                                <option id="selection-sort" class="option" name="selection-sort" value="selection">Selection Sort</option>
+                                <option id="merge-sort" class="option" name="merge-sort" value="merge">Merge Sort</option>
+                            </optgroup>
+                            <optgroup label="Special">
 
-        </div>
-        <div id="settings">
-            <div class="settings"></div>
-        </div>
-        <div id="stats">
-            <div class="stats"></div>
-        </div>
-        <div id="graph">
-            <div class="graph"></div>
-        </div>
-        
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="stats-div" class="panel fade">
+                <div class="stats"></div>
+            </div>
+            <div id="graph-div" class="panel fade">
+                <div id="graph" class="graph panel">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p><i id="creator">Made by <a href="https://github.com/RaptorAssassin">RaptorAssassin</a></i></p>
+        </footer>
         <script src="script.js" async defer></script>
     </body>
 </html> 
