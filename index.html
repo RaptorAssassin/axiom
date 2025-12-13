@@ -35,7 +35,7 @@
                             Array Length:
                             <span id="array-length">10</span>
                         </label>
-                        <input type="range" min="10" max="100" name="array-length-slider">
+                        <input type="range" min="10" max="100" value="10" name="array-length-slider" id="array-length-slider">
                     </div>
                     <div class="control-group panel-element">
                         <label for="generate-array-button"></label>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="control-group panel-element">
                         <label for="array-input">Array:</label>
-                        <input type="text" name="array-input">
+                        <input type="text" id="array-input" name="array-input" readonly>
                     </div>
                     <div class="control-group panel-element">
                         <button id="sort-button">
@@ -65,7 +65,7 @@
             <div id="stats-div" class="panel">
                 <div class="stats"></div>
             </div>
-            <div id="graph" class="panel">
+            <div id="bar-container" class="panel">
                 <div class="bar" index="0" style="height: 100px; width: 10%"></div>
             </div>
             <div id="algorithm-info" class="panel">

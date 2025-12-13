@@ -4,7 +4,7 @@
     --border-width: 10opx;
     --panel-background-color: rgb(99, 33, 253);
     --panel-color: rgb(212, 212, 212);
-    --panel-border-color: rgb(255, 65, 65);
+    --panel-border-color: rgb(0, 0, 0);
     --gradient-color-1: #ADD8E6;
     --gradient-color-2: rgb(57, 176, 216);
 }
@@ -15,6 +15,19 @@ body {
     color: white;
     border-radius: var(--border-radius);
     corner-shape: squircle;
+}
+
+div {
+    align-items: center;
+    margin: auto;
+}
+
+p {
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
 }
 
 i {
@@ -31,7 +44,6 @@ a {
     background-image: linear-gradient(90deg,var(--gradient-color-1), var(--gradient-color-2));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
 }
 
 .panel {
@@ -41,12 +53,12 @@ a {
     border-radius: var(--border-radius);
     corner-shape: squircle;
     border-width: var(--border-width);
-    size: auto;
+    max-width: 800px;
     animation: fade linear 0.5s;
+    
 }
 
 .panel-element {
-    margin: 1em;
     border-radius: var(--border-radius);
     corner-shape: squircle;
     color: var(--panel-color);
@@ -92,4 +104,8 @@ a {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+#array-input {
+    max-width: 150px;
 }
