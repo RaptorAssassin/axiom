@@ -1,8 +1,8 @@
 :root {
     --body-background-color: #121212; 
-    --border-radius: 5px;
+    --border-radius: 10px;
     --border-width: 10opx;
-    --panel-background-color: darkgray;
+    --panel-background-color: rgb(99, 33, 253);
     --panel-color: rgb(212, 212, 212);
     --panel-border-color: rgb(255, 65, 65);
     --gradient-color-1: #ADD8E6;
@@ -13,6 +13,8 @@ body {
     font-family: "Noto Kufi Arabic", sans-serif;
     background-color: var(--body-background-color);
     color: white;
+    border-radius: var(--border-radius);
+    corner-shape: squircle;
 }
 
 i {
@@ -40,16 +42,21 @@ a {
     corner-shape: squircle;
     border-width: var(--border-width);
     size: auto;
+    animation: fade linear 0.5s;
 }
 
 .panel-element {
     margin: 1em;
+    border-radius: var(--border-radius);
     corner-shape: squircle;
     color: var(--panel-color);
     border-color: var(--panel-border-color);
     border-width: var(--border-width);
 }
 
+.control-group {
+    display: flex;
+}
 
 .select {
     border-radius: var(--border-radius);
@@ -68,13 +75,13 @@ a {
 }
 
 .bar {
-    background-image: linear-gradient(0deg, white, blue);
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-image: linear-gradient(0deg, var(--gradient-color-1), var(--gradient-color-2));
     border-radius: var(--border-radius);
 }
 
-.fade {
-    animation: fadeUp 0.5s linear;
-}
 
 @keyframes fadeUp {
     from  {

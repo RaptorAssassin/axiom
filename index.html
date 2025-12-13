@@ -16,8 +16,7 @@
             <h1 id="main-header" class="title gradient">Sorting algorithms</h1>
         </header>
         <main>
-            <div id="settings-div" class="panel fade">
-                <div class="settings panel">
+            <div id="settings-panel" class="panel">
                     <div class="control-group panel-element">
                         <label for="algorithm-select">Sorting Algorithm</label>
                         <select id="algorithm-select" class="select" name="algorithm-select">
@@ -31,15 +30,47 @@
                             </optgroup>
                         </select>
                     </div>
+                    <div class="control-group panel-element">
+                        <label for="array-length-slider">
+                            Array Length:
+                            <span id="array-length">10</span>
+                        </label>
+                        <input type="range" min="10" max="100" name="array-length-slider">
+                    </div>
+                    <div class="control-group panel-element">
+                        <label for="generate-array-button"></label>
+                        <button id="generate-array-button" name="generate-array-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg>
+                            Generate Random Array
+                        </button>
+                    </div>
+                    <div class="control-group panel-element">
+                        <label for="array-input">Array:</label>
+                        <input type="text" name="array-input">
+                    </div>
+                    <div class="control-group panel-element">
+                        <button id="sort-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M320-202v-560l440 280-440 280Zm66.67-280Zm0 158.67L636-482 386.67-640.67v317.34Z"/></svg>
+                            Sort
+                        </button>
+                    </div>
+                    <div class="control-group panel-element">
+                        <button id="pause-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M523.33-200v-560H760v560H523.33ZM200-200v-560h236.67v560H200Zm390-66.67h103.33v-426.66H590v426.66Zm-323.33 0H370v-426.66H266.67v426.66Zm0-426.66v426.66-426.66Zm323.33 0v426.66-426.66Z"/></svg>
+                            Pause
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div id="stats-div" class="panel fade">
+            <div id="stats-div" class="panel">
                 <div class="stats"></div>
             </div>
-            <div id="graph-div" class="panel fade">
-                <div id="graph" class="graph panel">
-                    <div class="bar"></div>
-                </div>
+            <div id="graph" class="panel">
+                <div class="bar" index="0" style="height: 100px; width: 10%"></div>
+            </div>
+            <div id="algorithm-info" class="panel">
+                <h2>How does <span id="algorithm-name">Algorithm Name</span> work?</h2>
+                <p id="algorithm-description">Algorithm Info</p>
             </div>
         </main>
         <footer>
