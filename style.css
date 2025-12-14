@@ -20,6 +20,7 @@ body {
 div {
     align-items: center;
     margin: auto;
+    padding: 5px;
 }
 
 p {
@@ -39,6 +40,10 @@ a {
     color: var(--gradient-color-2)
 }
 
+button {
+    cursor: pointer;
+}
+
 .gradient {
     font-weight: 700;
     background-image: linear-gradient(90deg,var(--gradient-color-1), var(--gradient-color-2));
@@ -47,18 +52,27 @@ a {
 }
 
 .panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 800px;
     background-color: var(--panel-background-color);
     color: var(--panel-color);
     border-color: var(--panel-border-color);
     border-radius: var(--border-radius);
     corner-shape: squircle;
     border-width: var(--border-width);
-    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     animation: fade linear 0.5s;
     
 }
 
 .panel-element {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
     border-radius: var(--border-radius);
     corner-shape: squircle;
     color: var(--panel-color);
